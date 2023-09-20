@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sweper {
+  overflow: hidden;
+  background-color: green;
+}
+
+.sweper-wrapper {
+  display: flex;
+  width: max-content;
+  transition: all 0.4s ease-in-out;
+}
+
+/* CSS untuk aspek rasio 4:5 (default) */
+.sweper-slider {
+  width: 100vw;
+  background-color: blue; /* Warna latar belakang (sesuaikan dengan kebutuhan Anda) */
+  aspect-ratio: 4 / 5; /* Aspek rasio 4:5 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 0;
+}
+
+/* CSS untuk aspek rasio 21:9 (pada layar yang lebih besar) */
+@media (min-width: 639px) {
+  .sweper-slider {
+    aspect-ratio: 21 / 10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .satu {
+    background-image: url(img/1a.jpg) !important;
+  }
+  .dua {
+    background-image: url(img/2a.jpg) !important;
+  }
+  .tiga {
+    background-image: url(img/3a.jpg) !important;
+  }
+  .empat {
+    background-image: url(img/4a.jpg) !important;
+  }
+  .lima {
+    background-image: url(img/5a.jpg) !important;
+  }
+  .enam {
+    background-image: url(img/6a.jpg) !important;
+  }
+  .tujuh {
+    background-image: url(img/7a.jpg) !important;
+  }
+}
+
+@media (min-width: 767px) {
+  #sweper-slider {
+    aspect-ratio: 19 / 8;
+    background-position: center;
+    background-position-y: -7px;
+  }
+}
