@@ -80,3 +80,43 @@ function setSliderBackground() {
 
 // Panggil fungsi untuk mengatur gambar latar belakang slider
 setSliderBackground();
+
+const slider = document.querySelector('.slider');
+const leftButton = document.getElementById('prevBtn');
+const rightButton = document.getElementById('nextBtn');
+const slideList = document.querySelectorAll('.slide');
+let index = 0;
+console.log(slideList.length);
+
+rightButton.addEventListener('click', () => {
+  if (index < slideList.length - 1) {
+    index++;
+  } else {
+    index = 0;
+  }
+  moveSlider();
+});
+
+leftButton.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+  } else {
+    index = slideList.length - 1;
+  }
+  moveSlider();
+});
+
+function moveSlider() {
+  const slideWidth = slideList[index].offsetWidth;
+  const offset = -index * slideWidth;
+  slider.style.transform = `translateX(${offset}px)`;
+}
+
+// const intervalID4 = setInterval(() => {
+//   if (index < slideList.length - 1) {
+//     index++;
+//   } else {
+//     index = 0;
+//   }
+//   moveSlider();
+// }, 2000);
