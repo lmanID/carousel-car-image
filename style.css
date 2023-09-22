@@ -1,4 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Monda:wght@400;700&family=Montserrat:ital,wght@0,500;0,600;0,700;1,400&family=Moulpali&display=swap');
+
+:root {
+  /* font size */
+  --size-h1: 1.602em;
+  --size-h2: 1.424em;
+  --size-h3: 1.266em;
+  --size-text1: 1.125em;
+  --size-text2: 1em;
+  --size-text3: 0.889em;
+
+  /* Color */
+  --primary-color: #e4182d;
+  --secondary-color: #fff;
+  --secondary-2-color: #e5e7eb;
+  --black01: #333333;
+  --black02: #555555;
+  --black03: #7e7e7e;
+
+  /* margin */
+  --mp01: 24px;
+  --mp02: 18px;
+  --mp03: 16px;
+  --mp04: 12px;
+  --mp05: 8px;
+  --mp06: 6px;
+  --mp07: 4px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +69,12 @@ ul {
 .header-pil-mbl {
   background-color: #ffffff;
   padding-top: 56px;
-  padding-bottom: 32px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
 }
 .header-pil-mbl h1 {
   font-family: 'Inter', sans-serif;
@@ -49,10 +82,22 @@ ul {
   letter-spacing: -0.015em;
   font-size: 2em;
   text-align: center;
-  color: #171717;
+  color: #444444;
 }
 
 .header-pil-mbl h1 span {
+  color: #da0037;
+}
+
+.header-pil-mbl .desc-pil-mbl {
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  color: #717171;
+  max-width: 330px;
+  text-align: center;
+}
+
+.desc-pil-mbl span {
   color: #da0037;
 }
 /* ============= AKHIR HEADER PIL_MBL =============  */
@@ -170,6 +215,81 @@ button i {
   right: 0;
 }
 /* <!-- AKHIR CAROUSEL MOBIL -->  */
+
+/* ============= FOOTER ============= */
+footer {
+  background-color: var(--black01);
+  padding-top: 24px;
+  padding-left: 16px;
+  padding-left: 16px;
+}
+
+footer .description {
+  border-bottom: 1px solid var(--black02);
+
+  padding-bottom: 12px;
+}
+
+footer .honda-logo {
+  display: flex;
+  justify-content: start;
+  margin-top: 32px;
+  /* background-color: var(--black03); */
+}
+
+.header-footer {
+  font-family: 'Moulpali', sans-serif;
+  font-size: var(--size-h1);
+  color: var(--secondary-2-color);
+  font-weight: 500;
+  margin-top: var(--mp01);
+  line-height: 120%;
+}
+
+.title-footer {
+  color: var(--black03);
+  margin-bottom: var(--mp01);
+}
+
+footer p {
+  font-family: 'Moulpali', sans-serif;
+  line-height: 120%;
+}
+
+.tentang-dealer {
+  font-size: var(--size-text2);
+  color: var(--secondary-2-color);
+  font-family: 'Moulpali', sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  margin-top: var(--mp03);
+}
+
+.title-td {
+  font-size: var(--size-text3);
+  color: var(--black03);
+  margin-bottom: var(--mp05);
+}
+
+.tentang-pengembang {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tentang-pengembang img {
+  opacity: 0.6;
+}
+
+.tentang-pengembang p {
+  font-family: 'Moulpali', sans-serif;
+  color: var(--black03);
+  margin-top: var(--mp04);
+  margin-bottom: var(--mp01);
+}
+/* ============= AKHIR FOOTER ============= */
 
 /* CSS untuk aspek rasio 4:5 (default) */
 .sweper-slider {
