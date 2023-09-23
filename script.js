@@ -1,3 +1,19 @@
+const nav = document.querySelector('.nav');
+console.log(nav.offsetHeight);
+
+const fix_btn_menu = () => {
+  const imgLogoHonda = document.querySelector('.nav .menu-btn .logo-honda img');
+  if (window.scrollY > nav.offsetHeight + 100) {
+    nav.classList.add('active');
+    imgLogoHonda.classList.add('active');
+  } else {
+    nav.classList.remove('active');
+    imgLogoHonda.classList.remove('active');
+  }
+};
+
+window.addEventListener('scroll', fix_btn_menu);
+
 const sweperWrapper = document.querySelector('.sweper-wrapper');
 const sweperSlider = document.querySelectorAll('.sweper-slider');
 
